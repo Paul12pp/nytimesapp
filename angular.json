@@ -6,7 +6,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "angular-boilerplate": {
+        "nyt-app": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:application": {
@@ -23,7 +23,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/angular-boilerplate",
+                        "outputPath": "dist/nyt-app",
                         "index": "src/index.html",
                         "main": "src/main.ts",
                         "polyfills": "src/polyfills.ts",
@@ -69,11 +69,11 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "angular-boilerplate:build"
+                        "browserTarget": "nyt-app:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "angular-boilerplate:build:production"
+                            "browserTarget": "nyt-app:build:production"
                         }
                     }
                 },
@@ -100,42 +100,42 @@
                 "e2e": {
                     "builder": "@briebug/cypress-schematic:cypress",
                     "options": {
-                        "devServerTarget": "angular-boilerplate:serve",
+                        "devServerTarget": "nyt-app:serve",
                         "watch": true,
                         "headless": false
                     },
                     "configurations": {
                         "production": {
-                            "devServerTarget": "angular-boilerplate:serve:production"
+                            "devServerTarget": "nyt-app:serve:production"
                         }
                     }
                 },
                 "cypress-run": {
                     "builder": "@briebug/cypress-schematic:cypress",
                     "options": {
-                        "devServerTarget": "angular-boilerplate:serve"
+                        "devServerTarget": "nyt-app:serve"
                     },
                     "configurations": {
                         "production": {
-                            "devServerTarget": "angular-boilerplate:serve:production"
+                            "devServerTarget": "nyt-app:serve:production"
                         }
                     }
                 },
                 "cypress-open": {
                     "builder": "@briebug/cypress-schematic:cypress",
                     "options": {
-                        "devServerTarget": "angular-boilerplate:serve",
+                        "devServerTarget": "nyt-app:serve",
                         "watch": true,
                         "headless": false
                     },
                     "configurations": {
                         "production": {
-                            "devServerTarget": "angular-boilerplate:serve:production"
+                            "devServerTarget": "nyt-app:serve:production"
                         }
                     }
                 }
             }
         }
     },
-    "defaultProject": "angular-boilerplate"
+    "defaultProject": "nyt-app"
 }
