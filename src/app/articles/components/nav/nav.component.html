@@ -1,0 +1,34 @@
+<div class="row text-center">
+    <div class="col-4">
+        <button class="btn btn-dark" (click)="goMost()">Mas vistos
+        </button>
+    </div>
+    <div class="col-4">
+        <button class="btn btn-dark" (click)="goToday()">Hoy</button>
+
+    </div>
+    <div class="col-4">
+        <button class="btn btn-dark" (click)="goLast()">Ultimos 7 dias</button>
+    </div>
+</div>
+<div class="row mb-3">
+    <div class="col-4">
+        <div class="form-group">
+            <input type="search" class="form-control" [(ngModel)]="busqueda.termino" placeholder="Buscar noticia" />
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="form-group">
+            <select class="form-control" [(ngModel)]="busqueda.tipo">
+                <option value="">Filtro</option>
+                <option value="1">Autor</option>
+                <option value="2">Titulo</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="form-group">
+            <a class="btn btn-light" [routerLink]="['/articles', busqueda.termino,busqueda.tipo]">Buscar</a>
+        </div>
+    </div>
+</div>

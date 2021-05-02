@@ -1,0 +1,10 @@
+<app-nav>nav</app-nav>
+<section *ngIf="articles!=null && articles.length>0">
+    <app-card-articles [data]="articles" type="search"></app-card-articles>
+</section>
+<section *ngIf="articles==null || articles.length==0 && !isLoading$">
+    <h3>Sin resultados</h3>
+</section>
+<div *ngIf="isLoading$">
+    <h4>Cargando...</h4>
+</div>

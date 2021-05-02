@@ -1,0 +1,7 @@
+<app-nav>nav</app-nav>
+<section *ngIf="articles!=null && articles.length>0">
+    <app-card-articles [data]="articles"></app-card-articles>
+</section>
+<div *ngIf="isLoading$">
+    <h4>Cargando...</h4>
+</div>

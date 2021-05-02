@@ -1,0 +1,18 @@
+<div class="card text-white bg-dark mb-3" *ngFor="let item of articles">
+    <div class="row g-0">
+        <div *ngIf="item.multimedia.length>0" class="col-md-4">
+            <img [src]="urlImage+item.multimedia[0]['url']" width="50%">
+        </div>
+        <div class="col-md-8">
+            <div class="card-header">{{item.pub_date}}</div>
+            <div class="card-body">
+                <h5 class="card-title">{{item.headline.main}}</h5>
+                <p class="card-text">{{item.abstract}}</p>
+                <p class="card-text">{{item.lead_paragraph}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngIf="articles==null">
+    <h4>No encontrado</h4>
+</div>
